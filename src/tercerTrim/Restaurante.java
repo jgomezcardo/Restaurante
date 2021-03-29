@@ -75,9 +75,8 @@ public class Restaurante {
 		do {
 			System.out.println("Que menu desea escoger :" + "\n");
 			int el2 = ent.nextInt();
-			
-			
-			if(el2 == 1 || el2 == 2 ||el2 == 3 && el !=0) {
+
+			if (el2 == 1 || el2 == 2 || el2 == 3 && el != 0) {
 				switch (el2) {
 
 				case 1:
@@ -98,10 +97,9 @@ public class Restaurante {
 
 				}
 				cont++;
-			}else {
+			} else {
 				System.out.println("Por favor introduce el Menu entre 1 al 3, gracias");
 			}
-			
 
 		} while (cont <= el);
 
