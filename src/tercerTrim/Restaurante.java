@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Restaurante {
 
 	public static void main(String args[]) {// Parte de JuanGomezCardo
-		Pedidos MenusRestaurante = new Pedidos();
+		
 		Scanner ent = new Scanner(System.in);
 		int elec = 0;
 
@@ -29,9 +29,9 @@ public class Restaurante {
 			break;
 		case 2:
 			
-				for (int i =0; i < MenusRestaurante.ListaMenu.size(); i++) {
-					System.out.println(MenusRestaurante.ListaMenu.get(i));
-				}
+				
+					
+				
 			
 
 			break;
@@ -64,23 +64,6 @@ public class Restaurante {
 		
 		
 		
-		
-	/*	String[] Primeros = new String[] {"Lentajas con chorizo","Cocido montañes","Arroz a la cubana"};
-		String Segundos[] = new String[] {"Chuleta con patatas","Pescado","Pisto"};
-		String Postre[] = new String[] {"Tarta de queso","Natilla","Yogur"};
-		
-		
-		Scanner ent = new Scanner(System.in);
-		System.out.println("A continuacion le mostraremos el menu" + "\n" + "\n" +
-		"Primeros platos " +"\n" + Arrays.toString(Primeros)
-		);
-		
-		
-		System.out.println("Elija el primer plato :");
-			String sel = ent.next();
-		if(sel.equals(Primeros)) {
-			System.out.println();
-		}
-		}*/
+	
 	
 }
