@@ -43,27 +43,9 @@ public class Restaurante {
 
 	}
 
-	///public static void RealizarPedido() {// Parte de CarlosAntonyMoscosoPalacios
+	public static void RealizarPedido() {// Parte de CarlosAntonyMoscosoPalacios
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
+	}
 	
 }
