@@ -41,9 +41,13 @@ public class Restaurante {
 
 	public static void RealizarPedido() {// Parte de CarlosAntonyMoscosoPalacios
 		Scanner ent = new Scanner(System.in);
-		boolean op = true;
+		
+		
 
-		System.out.println("¿Cuantas personas van a pedir?");
+		
+		System.out.println("/////////////////////////////////////\r\n"
+				+ "// ¿Cuantas personas van a pedir? // \r\n"
+				+ "////////////////////////////////////");
 		int el = ent.nextInt();
 		int cont = 1;
 
