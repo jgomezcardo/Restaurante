@@ -27,7 +27,7 @@ public class Restaurante {
 			
 			break;
 		case 2:
-			//parte del codigo correspondiente a RealizarPedido();
+			//parte del codigo correspondiente a RealizarPedido().;
 			
 			break;
 		case 3:
