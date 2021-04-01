@@ -34,7 +34,7 @@ public class Restaurante {
 			
 			
 			int cont = 1;
-			float preciom1 = 0.25f, preciom2 = 0.50f, preciom3 = 0.75f, preciom4 = 1.00f, preciom5 = 1.25f; 
+			float preciom1 = 0.35f, preciom2 = 0.50f, preciom3 = 0.75f, preciom4 = 1.00f, preciom5 = 1.25f; 
 			
 			
 			do {
