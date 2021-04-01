@@ -5,11 +5,73 @@ import java.util.Scanner;
 public class GestorPedidos {
 
 	private float cuenta = 0;
-
+	private float com;
 	public void agregarCuenta(float deuda) {
-		cuenta += deuda;
+		cuenta += deuda * com;
 	}
 
+	public void emesa() {
+		// parte del codigo correspondiente a ReservaMesa();
+		Scanner ent = new Scanner(System.in);
+		System.out.println("//////////////////////////////////////////\n" + 
+				"//   ¿Que mesa desea reservar?		//\n" + 
+				"//					//\n" + 
+				"// 1. -Mesa para 2 = x0.25€		//\n" + 
+				"// 2. -Mesa para 4 = x0.50€		//\n" + 
+				"// 3. -Mesa para 6 = x0.75€		//\n" + 
+				"// 4. -Mesa para 8 = x1.00€		//\n" + 
+				"// 5. -Mesa para 10 o más = 1.25€	//\n" + 
+				"//					//\n" + 
+				"//////////////////////////////////////////");
+		
+		
+		int cont = 1;
+		float preciom1 = 1.25f, preciom2 = 1.50f, preciom3 = 1.75f, preciom4 = 2.00f, preciom5 = 2.25f; 
+
+		
+		do {
+			
+			int mesa = ent.nextInt();
+			if(mesa == 1 || mesa == 2 || mesa == 3 || mesa == 4 || mesa == 5) {
+				
+			
+			switch(mesa) {
+			
+			case 1: 
+				System.out.println("Mesa para 2 = " + preciom1 + "€");
+				com = preciom1;
+				break;
+			case 2:
+				System.out.println("Mesa para 4 = " + preciom2 + "€");
+				com = preciom2;
+				break;
+			case 3:
+				System.out.println("Mesa para 6 = " + preciom3 + "€");
+				com = preciom3;
+				break;
+			case 4:
+				System.out.println("Mesa para 8 = " + preciom4 + "€");
+				com = preciom4;
+				break;
+			case 5:
+				System.out.println("Mesa para 10 o mÃ¡s = " + preciom5 + "€");
+				com = preciom5;
+				break;
+				
+			}
+			cont++;
+			
+			}else {
+				
+				System.out.println("Porfavor seleccione una opcion para reservar alguna mesa");
+				
+			}
+		}while(cont > 5);
+		
+		
+		
+		
+	}
 	public void pagar() {
 		Scanner ent = new Scanner(System.in);
 		boolean op = true;
