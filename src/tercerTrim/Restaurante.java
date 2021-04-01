@@ -1,18 +1,54 @@
 package tercerTrim;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Restaurante {
 
-	public static void main (String args[]) {
-		
+	public static void main(String args[]) {
+		GestorRestaurante();
+	}
+
+	private static void GestorRestaurante() {
+
 		Scanner ent = new Scanner(System.in);
 		int elec = 0;
+
+		boolean banderaRestaurante = true;
+		GestorPedidos gestorPedidos = new GestorPedidos();
+
+		while (banderaRestaurante) {
+			System.out.println("//////////////////////////////////////////////////////////////////////////\r\n"
+					+ "// Bienvenido a nuestro restaurante, estaremos encantados de atenderle 	//\r\n"
+					+ "// ___________________________________________________________________  //\r\n"
+					+ "// Â¿QuÃ© desea hacer?						       	//\r\n"
+					+ "// 1.Reservar una mesa						   	//\r\n"
+					+ "// 2.Realizar pedido						   	//\r\n"
+					+ "// 3.Proceder con el pago					   	// \r\n"
+					+ "//////////////////////////////////////////////////////////////////////////");
+
+			elec = ent.nextInt();
+
+			switch (elec) {
+
+			case 1:
+				// parte del codigo correspondiente a ReservaMesa();
+
+				break;
+			case 2:
+				float deuda = gestorPedidos.RealizarPedido();
+				gestorPedidos.agregarCuenta(deuda);
+				break;
+			case 3:
+				// parte del codigo correspondiente a cobroCliente()$;
+				gestorPedidos.pagar();
+				break;
+			}
 		 
 		System.out.println("//////////////////////////////////////////////////////////////////////////\r\n" + 
 				"// Bienvenido a nuestro restaurante, estaremos encantados de atenderle 	//\r\n" + 
 				"// ___________________________________________________________________  //\r\n" + 
-				"// ¿Qué desea hacer?						       	//\r\n" + 
+				"// Â¿QuÃ© desea hacer?						       	//\r\n" + 
 				"// 1.Reservar una mesa						   	//\r\n" + 
 				"// 2.Realizar pedido						   	//\r\n" + 
 				"// 3.Proceder con el pago					   	// \r\n" + 
@@ -25,12 +61,12 @@ public class Restaurante {
 		case 1:
 			//parte del codigo correspondiente a ReservaMesa();
 			
-			System.out.println("¿Que mesa desea reservar? \n"
-					+ "1º: Mesa para 2 = 0.25€ \n"
-					+ "2º: Mesa para 4 = 0.50€ \n"
-					+ "3º: Mesa para 6 = 0.75€ \n"
-					+ "4º: Mesa para 8 = 1.00€ \n"
-					+ "5º: Mesa para 10 o más = 1.25€");
+			System.out.println("Â¿Que mesa desea reservar? \n"
+					+ "1Âº: Mesa para 2 = 0.25â‚¬ \n"
+					+ "2Âº: Mesa para 4 = 0.50â‚¬ \n"
+					+ "3Âº: Mesa para 6 = 0.75â‚¬ \n"
+					+ "4Âº: Mesa para 8 = 1.00â‚¬ \n"
+					+ "5Âº: Mesa para 10 o mÃ¡s = 1.25â‚¬");
 			
 			
 			int cont = 1;
@@ -46,19 +82,19 @@ public class Restaurante {
 				switch(mesa) {
 				
 				case 1: 
-					System.out.println("Mesa para 2 = " + preciom1 + "€");
+					System.out.println("Mesa para 2 = " + preciom1 + "â‚¬");
 					break;
 				case 2:
-					System.out.println("Mesa para 4 = " + preciom2 + "0€");
+					System.out.println("Mesa para 4 = " + preciom2 + "0â‚¬");
 					break;
 				case 3:
-					System.out.println("Mesa para 6 = " + preciom3 + "€");
+					System.out.println("Mesa para 6 = " + preciom3 + "â‚¬");
 					break;
 				case 4:
-					System.out.println("Mesa para 8 = " + preciom4 + "0€");
+					System.out.println("Mesa para 8 = " + preciom4 + "0â‚¬");
 					break;
 				case 5:
-					System.out.println("Mesa para 10 o más = " + preciom5 + "€");
+					System.out.println("Mesa para 10 o mÃ¡s = " + preciom5 + "â‚¬");
 					break;
 					
 				}
@@ -83,7 +119,10 @@ public class Restaurante {
 			
 			break;
 		}
-		
+
+		System.out.println("Gracias por elegirnos");
 	}
+
+}
 	
 }
